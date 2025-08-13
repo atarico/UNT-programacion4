@@ -104,3 +104,29 @@ export default App;
 **Si el componente que queremos renderizar necesita recibir props, podemos usar la propiedad `children` y pasarle el componente como un elemento hijo.**
 
 ##### Una vez realizado todo el routeo verificar si los componentes se renderizan correctamente.
+
+### Paso 3 - Crear el listado de items
+
+Al componente de List.jsx le pasamos la lista de items como props y renderizamos un listado de enlaces.
+Dentro de cada componente `Link` le pasamos la ruta `/items/${item.id}` para que al hacer click en el enlace nos lleve a la vista del detalle del item correspondiente y renderizamos el nombre de cada item como `children`.
+
+```jsx
+import { Link } from "wouter";
+
+const List = ({ items }) => {
+  return (
+    <div>
+      <h1>Listado de Items</h1>
+      <ul>
+        {items.map((item) => (
+          <li key={item.id}>
+            <Link href={`/items/${item.id}`}>{item.nombre}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default List;
+```
