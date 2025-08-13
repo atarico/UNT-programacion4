@@ -63,3 +63,44 @@ export const Navbar = () => {
 
 Ahora en vez de la etiqueta `<a>` estamos usando el componente `<Link>` de `wouter`, que nos permite navegar entre las diferentes rutas de nuestra aplicación sin recargar la página.
 Esto quiere decir que cuando yo haga click en el enlace `lista` se debe ejecutar la ruta `/list`.
+
+### Paso 2 - Configurar las rutas
+
+Configurar las rutas en `src/App.jsx` utilizando `wouter`:
+
+- Importar los componentes necesarios
+- Definir las rutas utilizando el componente `Route` que viene desde `wouter` modificando el atributo o propiedad `path` con la ruta que nosotros querramos que se ejecute, además debemos decirle qué componente queremos que se renderice cuando se acceda a esa ruta modificando la propiedad `component`.
+
+- Como tenemos varias rutas, usaremos el componente `Switch`, ponemos todos los componentes `Route` dentro de él, lo que nos permite renderizar una sola ruta a la vez. De lo contrario, se renderizarían todas las rutas que coincidan con la URL actual.
+
+```jsx
+import { Route, Switch } from "wouter";
+import { Navbar } from "./components/navbar";
+import Home from "./pages/Home";
+import List from "./pages/List";
+
+function App() {
+  const items = [
+    { id: 1, nombre: "item 1" },
+    { id: 2, nombre: "item 2" },
+    { id: 3, nombre: "item 3" },
+  ];
+
+  return (
+    <Switch>
+      <Route path="/" component={Home} />
+
+      <Route path="/list">
+        <List items={items} />
+      </Route>
+    </Switch>
+  );
+}
+
+export default App;
+```
+
+**Si vamos a renderizar un componente directamente podemos usar la propiedad `component` y pasarle el componente como valor.**
+**Si el componente que queremos renderizar necesita recibir props, podemos usar la propiedad `children` y pasarle el componente como un elemento hijo.**
+
+##### Una vez realizado todo el routeo verificar si los componentes se renderizan correctamente.
