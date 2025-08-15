@@ -1,6 +1,7 @@
 import { Link } from "wouter"
+import planetas from "../data/planets-data"
 
-export default function PlanetList({ planetas }) {
+export default function PlanetList() {
     return (
         <>
             <h1>PlanetList</h1>

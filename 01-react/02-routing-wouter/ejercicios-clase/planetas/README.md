@@ -288,3 +288,98 @@ const ItemDetail = ({ items }) => {
 
 export default ItemDetail;
 ```
+
+### Paso 6 - Separar la lógica de datos de la lógica de vistas
+
+Como último paso lo que hacemos es sacar del componente `App` la lista de planetas y moverla a un archivo de datos separado. Luego, importamos esta lista en los componentes que la necesiten.
+
+1. Creamos un nuevo archivo llamado `planets-data.js` en la carpeta `src/data` y movemos la lista de planetas allí.
+
+```jsx
+// src/data/planets-data.js
+const planetas = [
+  { planeta: "Mercurio" },
+  { id: 2, planeta: "Venus" },
+  { id: 3, planeta: "Tierra" },
+  { id: 4, planeta: "Marte" },
+  { id: 5, planeta: "Jupiter" },
+  { id: 6, planeta: "Saturno" },
+  { id: 7, planeta: "Urano" },
+  { id: 8, planeta: "Neptuno" },
+];
+
+export default planetas;
+```
+
+2. Luego, en el componente `App.jsx`, reescribimos las rutas
+
+```jsx
+// src/App.jsx
+import { Route, Switch } from "wouter";
+import { Navbar } from "./components/navbar";
+import Home from "./pages/Home";
+import List from "./pages/List";
+import ItemDetail from "./pages/itemDetail";
+
+function App() {
+  return (
+    <Navbar>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/planets" component={PlanetList} />
+        <Route path="/planeta/:id" component={PlanetDetail} />
+        <Route component={NotFound} />
+      </Switch>
+    </Navbar>
+  );
+}
+
+export default App;
+```
+
+3. Finalmente, en los componentes `List` y `ItemDetail`, también importamos la lista de planetas desde el archivo de datos.
+
+```jsx
+// src/pages/List.jsx
+import planetas from "../data/planets-data";
+
+export default function List() {
+  return (
+    <div>
+      <h1>Lista de Planetas</h1>
+      <ul>
+        {planetas.map((planeta) => (
+          <li key={planeta.id}>{planeta.planeta}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+```
+
+```jsx
+// src/pages/itemDetail.jsx
+import { useParams } from "wouter";
+import planetas from "../data/planets-data";
+
+const ItemDetail = () => {
+  const { id } = useParams();
+  const planeta = planetas.find((p) => p.id === Number(id));
+
+  if (!planeta) {
+    return <NotFound />;
+  }
+
+  return (
+    <div>
+      <h1>Detalles del Planeta</h1>
+      <p>ID: {planeta.id}</p>
+      <p>Nombre: {planeta.planeta}</p>
+    </div>
+  );
+};
+
+export default ItemDetail;
+```
+
+**Con estos cambios, hemos separado la lógica de datos de la lógica de las vistas, lo que hace que nuestro código sea más limpio y fácil de mantener.**
