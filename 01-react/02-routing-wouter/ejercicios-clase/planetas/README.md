@@ -130,3 +130,72 @@ const List = ({ items }) => {
 
 export default List;
 ```
+
+### Paso 4 - Crear el detalle del item y ruteo
+
+Como pasamos la lista de items como props al componente `ItemDetail`, podemos usar el hook `useParams` de `wouter` para obtener el id del item que queremos mostrar.
+
+`itemDetail.jsx`
+
+```jsx
+import { Link, useParams } from "wouter";
+
+const ItemDetail = ({ items }) => {
+  /* Hook de wouter */
+  const { id } = useParams();
+
+  const item = items.find((item) => item.id === Number(id));
+
+  return (
+    <div>
+      <h1>Detalles del item</h1>
+      <p>id: {item.id}</p>
+      <p>nombre: {item.nombre}</p>
+
+      <Link href="/list">Volver a la lista</Link>
+    </div>
+  );
+};
+
+export default ItemDetail;
+```
+
+`wouter` nos provee de un hook llamado `useParams` que nos permite acceder a los parámetros de la ruta actual.
+En este caso, estamos accediendo al parámetro `id` que definimos en la ruta `/items/:id`.
+Cuando accedemos a la ruta `/items/1`, el valor de `id` será `1`.
+
+`App.jsx`
+
+```jsx
+import { Route, Switch } from "wouter";
+import { Navbar } from "./components/navbar";
+import Home from "./pages/Home";
+import List from "./pages/List";
+import ItemDetail from "./pages/itemDetail";
+
+function App() {
+  const items = [
+    { id: 1, nombre: "item 1" },
+    { id: 2, nombre: "item 2" },
+    { id: 3, nombre: "item 3" },
+  ];
+
+  return (
+    <Navbar>
+    <Switch>
+      <Route path="/" component={Home} />
+
+      <Route path="/list">
+        <List items={items} />
+      </Route>
+
+      <Route path="/items/:id">
+        <ItemDetail items={items} />
+      </Route>
+    </Switch>
+  );
+}
+
+export default App;
+
+```

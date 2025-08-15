@@ -1,7 +1,8 @@
 import { Route, Switch } from "wouter"
 import { Navbar } from "./components/navbar"
 import Home from "./pages/home"
-import { PlanetList } from "./pages/planet-List"
+import PlanetList from "./pages/planet-List"
+import PlanetDetail from "./pages/planet-detail"
 
 function App() {
 
@@ -23,10 +24,18 @@ function App() {
       <Navbar />
 
       <Switch>
+        {/* renderizar un componente simple */}
         <Route path="/" component={Home} />
+
+        {/* renderizar un componente al que se le pasan props */}
         <Route path="/planets">
           <PlanetList planetas={planetas} />
         </Route>
+
+        <Route path="/planeta/:id">
+          <PlanetDetail planetas={planetas} />
+        </Route>
+
       </Switch>
     </>
   )
