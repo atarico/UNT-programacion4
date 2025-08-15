@@ -3,11 +3,12 @@ import { Navbar } from "./components/navbar"
 import Home from "./pages/home"
 import PlanetList from "./pages/planet-List"
 import PlanetDetail from "./pages/planet-detail"
+import NotFound from "./pages/not-found"
 
 function App() {
 
   const planetas = [
-    { id: 1, planeta: "Mercurio" },
+    { planeta: "Mercurio" },
     { id: 2, planeta: "Venus" },
     { id: 3, planeta: "Tierra" },
     { id: 4, planeta: "Marte" },
@@ -35,6 +36,8 @@ function App() {
         <Route path="/planeta/:id">
           <PlanetDetail planetas={planetas} />
         </Route>
+
+        <Route component={NotFound} />
 
       </Switch>
     </>

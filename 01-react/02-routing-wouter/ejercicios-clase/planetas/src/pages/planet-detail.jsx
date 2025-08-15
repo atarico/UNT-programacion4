@@ -1,9 +1,15 @@
 import { Link, useParams } from "wouter";
+import NotFound from "./not-found";
 
 export default function PlanetDetail({ planetas }) {
 
     const { id } = useParams();
     const planeta = planetas.find(elPlaneta => elPlaneta.id === Number(id));
+
+    if (!planeta) {
+        return <NotFound />;
+    }
+
     return (
         <>
             <h1>PlanetDetail</h1>

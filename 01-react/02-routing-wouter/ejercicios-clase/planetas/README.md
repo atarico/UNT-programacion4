@@ -199,3 +199,92 @@ function App() {
 export default App;
 
 ```
+
+### Paso 5 - Crear pag NotFound - 404
+
+Como sabemos, es importante manejar los errores 404 en nuestra aplicación. Para ello, crearemos un nuevo componente llamado `NotFound.jsx` y lo utilizaremos en nuestra configuración de rutas.
+
+`NotFound.jsx`
+
+```jsx
+import React from "react";
+
+export default function NotFound() {
+  return (
+    <>
+      <h1>404 - Not Found</h1>
+      <p>La página que estás buscando no existe.</p>
+    </>
+  );
+}
+```
+
+‼️Para manejar el error 404, lo que hacemos es en el componente `Route` es no definir niguna ruta. Como ya definimos las rutas `/` para el componente `Home`, `/list` para el componente `List` y `/items/:id` para el componente `ItemDetail`, cualquier otra ruta que no coincida con estas será manejada por el componente `NotFound`. Esto asegura que si un usuario intenta acceder a una ruta que no existe, verá la página 404 en lugar de un error en la consola o una pantalla en blanco.
+
+```jsx
+import { Route, Switch } from "wouter";
+import { Navbar } from "./components/navbar";
+import Home from "./pages/Home";
+import List from "./pages/List";
+import ItemDetail from "./pages/itemDetail";
+import NotFound from "./pages/NotFound";
+
+function App() {
+  const items = [
+    { nombre: "item 1" } /* le saco el id para forzar el error 404 */,
+    { id: 2, nombre: "item 2" },
+    { id: 3, nombre: "item 3" },
+  ];
+
+  return (
+    <Navbar>
+      <Switch>
+        <Route path="/" component={Home} />
+
+        <Route path="/list">
+          <List items={items} />
+        </Route>
+
+        <Route path="/items/:id">
+          <ItemDetail items={items} />
+        </Route>
+
+        <Route component={NotFound} />
+      </Switch>
+    </Navbar>
+  );
+}
+
+export default App;
+```
+
+Ahora también debemos asegurarnos de que el componente `ItemDetail` maneje correctamente el caso en el que no se encuentra el item. Para eso primero quitamos el `id` de un item de nuestra lista de datos y en el componente `item-detail` verificamos si el item existe, sino renderizamos el componente `NotFound`.
+
+`item-detail.jsx`
+
+```jsx
+import { Link, useParams } from "wouter";
+
+const ItemDetail = ({ items }) => {
+  /* Hook de wouter */
+  const { id } = useParams();
+  const item = items.find((item) => item.id === Number(id));
+
+  // Renderizamos el componente NotFound si no se encuentra el item
+  if (!item) {
+    return <NotFound />;
+  }
+
+  return (
+    <div>
+      <h1>Detalles del item</h1>
+      <p>id: {item.id}</p>
+      <p>nombre: {item.nombre}</p>
+
+      <Link href="/list">Volver a la lista</Link>
+    </div>
+  );
+};
+
+export default ItemDetail;
+```
