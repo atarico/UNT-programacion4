@@ -1,8 +1,9 @@
 export default function Home() {
     return (
-        <>
-            <h1>Home</h1>
-            <p>Bienvenidos!!! 😁</p>
-        </>
+        <main className="p-4 bg-blend-color min-h-screen">
+            <h1 className="text-4xl font-bold mb-8 text-center">El Sistema Solar y los Planetas</h1>
+            <p className="mb-4">El Sistema Solar es un conjunto fascinante que incluye el Sol, una estrella de tipo G2V, y todos los cuerpos celestes que orbitan a su alrededor. Formado hace aproximadamente 4.600 millones de años, está compuesto por ocho planetas, satélites naturales, asteroides, cometas y polvo interplanetario, todos ligados por la gravedad del Sol. Los planetas se dividen en dos categorías principales: los interiores, rocosos o terrestres (Mercurio, Venus, Tierra y Marte), y los exteriores, gaseosos o jovianos (Júpiter, Saturno, Urano y Neptuno). Cada planeta tiene características únicas, como los anillos de Saturno o la atmósfera rica en dióxido de carbono de Venus, lo que hace del Sistema Solar un laboratorio natural para estudiar la diversidad cósmica.</p>
+            <p>Los planetas del Sistema Solar varían enormemente en tamaño, composición y condiciones ambientales. Por ejemplo, Mercurio, el más cercano al Sol, experimenta temperaturas extremas debido a su falta de atmósfera significativa, mientras que Júpiter, el gigante gaseoso, tiene una Gran Mancha Roja, una tormenta más grande que la Tierra que ha persistido durante siglos. La Tierra es única por su capacidad para sostener vida, gracias a su atmósfera rica en oxígeno y la presencia de agua líquida. Además, los planetas exteriores, como Urano y Neptuno, están compuestos principalmente de hielos y gases, lo que los distingue de los gigantes gaseosos como Júpiter. El estudio de estos mundos sigue revelando datos cruciales sobre la formación y evolución de nuestro vecindario estelar.</p>
+        </main>
     )
 }
