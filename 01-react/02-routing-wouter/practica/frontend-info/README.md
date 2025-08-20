@@ -1,12 +1,68 @@
-# React + Vite
+# 🛠 Ejercicio de Debugging con React + Wouter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto contiene múltiples errores en el enrutado, pasaje de props y estructura de componentes.  
+El objetivo es **identificar y corregir los errores** para que la aplicación funcione correctamente.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Pasos para trabajar
 
-## Expanding the ESLint configuration
+### 1. Clonar el repositorio
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/atarico/UNT-programacion4
+cd 01-react/02-routing-wouter/practica/frontend-info
+```
+
+### 2. Crear una nueva rama
+
+```bash
+git checkout -b fix/routing-errors
+```
+
+### 3. Ejecutar el proyecto
+
+```bash
+npm install
+npm run dev
+```
+
+> Vas a notar que la app no navega correctamente, muestra pantallas en blanco o quizas renderiza más de lo debido.
+
+### 4. Corregir los errores
+
+- Analiza y corrige los errores en el enrutado, pasaje de props y estructura de componentes.
+- Documenta todos los cambios realizados.
+
+### 5. Confirmar cambios
+
+```bash
+git add <archivo.jsx>
+git commit -m "Fix routing and props errors"
+```
+
+### 6. Subir cambios
+
+```bash
+git push origin fix/routing-errors
+```
+
+### 7. Crear una Pull Request
+
+1. Abrir el repositorio en GitHub.
+2. Hacer clic en **"Compare & Pull Request"**.
+3. Agregar un título y descripción explicando los cambios.
+4. Crear la PR para revisión.
+
+---
+
+## 🎯 Objetivo final
+
+Cuando termines, la app deberá:
+
+- Renderizar correctamente una sola vista por ruta.
+- Navegar sin errores usando Wouter.
+- Mostrar correctamente las props.
+- No tener errores en consola.
+
+### La correcta entrega se tendrá en cuenta para la nota final para quien lo necesite
