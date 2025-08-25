@@ -1,0 +1,11 @@
+[{"id":1,"apellido":"Bula","nombre":"Fernanda","edad":35,"sexo":"F","plan":"B","peso":68,"altura":1.53,"telefono":"+543364358683","estado":"ACT"},
+{"id":2,"apellido":"Carvan","nombre":"Lia","edad":45,"sexo":"F","plan":"B","peso":49,"altura":1.61,"telefono":"+543364358683","estado":"ACT"},
+{"id":3,"apellido":"Dalmas","nombre":"Marcos","edad":55,"sexo":"M","plan":"C","peso":78,"altura":1.71,"telefono":"+543364358683","estado":"ACT"},
+{"id":4,"apellido":"Sandor","nombre":"Marcela","edad":24,"sexo":"F","plan":"A","peso":58,"altura":1.69,"telefono":"+543364358683","estado":"ACT"},
+{"id":5,"apellido":"Infante","nombre":"Martin","edad":46,"sexo":"M","plan":"B","peso":85,"altura":1.63,"telefono":"+543364358683","estado":"BAJ"},
+{"id":6,"apellido":"Kolk","nombre":"Jose","edad":39,"sexo":"M","plan":"B","peso":68,"altura":1.73,"telefono":"+543364358683","estado":"ACT"},
+{"id":7,"apellido":"Capri","nombre":"Maria","edad":40,"sexo":"F","plan":"C","peso":54,"altura":1.61,"telefono":"+543364358683","estado":"ACT"},
+{"id":8,"apellido":"Alomar","nombre":"Gabriel","edad":54,"sexo":"M","plan":"C","peso":78,"altura":1.71,"telefono":"+543364358683","estado":"ACT"},
+{"id":9,"apellido":"Marcoantonio","nombre":"Aura","edad":38,"sexo":"F","plan":"B","peso":67,"altura":1.76,"telefono":"+543364358683","estado":"ACT"},
+{"id":10,"apellido":"Lala","nombre":"Marina","edad":54,"sexo":"F","plan":"C","peso":68,"altura":1.67,"telefono":"+543364358683","estado":"BAJ"}
+]
