@@ -18,7 +18,7 @@ Swagger es una especificación para describir APIs REST, mientras que OpenAPI es
 
 ### 🎯 **Jerarquía de Filtros**
 
-![Jerarquía de Filtros](06-jerarquia-de-filtros.jpg)
+![Jerarquía de Filtros](./jerarquia-de-filtros.svg)
 
 ### 📋 **Tipos de Filtros**
 

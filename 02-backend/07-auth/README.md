@@ -23,7 +23,7 @@ La autorización es el proceso de determinar qué acciones puede realizar un usu
 
 ### 🔄 **Flujo de Autenticación y Autorización**
 
-![Flujo de Autenticación y Autorización](07-flujo-de-autenticacion-y-autorizacion.jpg)
+![Flujo de Autenticación y Autorización](./flujo-de-autenticacion-y-autorizacion.svg)
 
 ### 🏗️ **Componentes del Sistema de Seguridad**
 
