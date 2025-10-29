@@ -18,7 +18,7 @@ EF Core es la versión moderna y multiplataforma de Entity Framework, diseñada 
 
 ### 🔄 **Flujo de Trabajo de EF Core**
 
-![Flujo de Trabajo de EF Core](./flujo-de-trabajo.svg)
+![Flujo de Trabajo de EF Core](./flujo-de-trabajo.jpg)
 
 ### 🎯 **Componentes Principales**
 
@@ -490,7 +490,7 @@ public partial class AuthImplemented : Migration
 
 ### 🔄 **Flujo de Migraciones**
 
-![Flujo de Migraciones](./flujo-de-migraciones.svg)
+![Flujo de Migraciones](./flujo-de-migraciones.jpg)
 
 ## Operaciones CRUD
 

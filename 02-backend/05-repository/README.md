@@ -22,7 +22,7 @@ El patrón Repository actúa como una capa de abstracción entre la lógica de n
 
 ### 🔄 **Flujo de Datos**
 
-![Repositorio](./repository.svg)
+![Repositorio](./repository.jpg)
 
 ### 🏛️ **Estructura de Repositorios**
 

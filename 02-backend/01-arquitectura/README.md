@@ -8,7 +8,7 @@ La arquitectura de ASP.NET Core está diseñada siguiendo principios de **Clean 
 
 ### 🏗️ **Arquitectura en Capas (Layered Architecture)**
 
-![Arquitectura en Capas](./arquitectura.svg)
+![Arquitectura en Capas](./arquitectura.jpg)
 
 #### **Capa de Presentación (Controllers)**
 
@@ -199,11 +199,11 @@ public interface IUserRepository : IRepository<User>
 
 ### 🔄 **Flujo de Request Completo**
 
-![Flujo de Request Completo](./flujo-de-datos.svg)
+![Flujo de Request Completo](./flujo-de-datos.jpg)
 
 ### 🛡️ **Middleware Pipeline**
 
-![Middleware Pipeline](./pipeline.svg)
+![Middleware Pipeline](./pipeline.jpg)
 
 ## Configuración de Dependencias
 

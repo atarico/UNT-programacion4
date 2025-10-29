@@ -262,7 +262,7 @@ modelBuilder.Entity<User>()
 
 ### 📊 **Diagrama de Relaciones**
 
-![Relaciones entre Modelos](./relaciones.svg)
+![Relaciones entre Modelos](./relaciones.jpg)
 
 ## Configuración de Base de Datos
 
