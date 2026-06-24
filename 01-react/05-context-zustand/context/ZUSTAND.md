@@ -45,11 +45,11 @@ Supón que tienes varios componentes que muestran o actualizan el conteo de noti
 ### 1. Creación del proyecto
 
 ```bash
-npm create vite@latest contador-app
+pnpm create vite@latest contador-app
 cd contador-app
-npm i
-npm i zustand
-npm run dev
+pnpm install
+pnpm add zustand
+pnpm dev
 ```
 
 ### 2. Definir el store con Zustand

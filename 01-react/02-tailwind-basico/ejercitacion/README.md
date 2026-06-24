@@ -5,14 +5,14 @@
 1. Crear un nuevo proyecto de Vite
 
 ```bash
-npm create vite@latest my-project
+pnpm create vite@latest my-project
 cd my-project
 ```
 
 2. Instalar TailwindCSS y su plugin para Vite
 
 ```bash
-npm install tailwindcss @tailwindcss/vite
+pnpm add tailwindcss @tailwindcss/vite
 ```
 
 3. Agrega el plugin de TailwindCSS a la configuración de Vite

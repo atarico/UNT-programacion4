@@ -9,13 +9,13 @@
 ## Instalación
 
 ```bash
-npm create vite@latest
+pnpm create vite@latest
 cd mini-ejercicio-wouter
-npm install
+pnpm install
 ```
 
 ```bash
-npm install wouter
+pnpm add wouter
 ```
 
 ## **Pasos para implementar el routing**

@@ -78,10 +78,10 @@ const value = useContext(MiContexto);
 ### 🚀 Setup
 
 ```bash
-npm create vite@latest
+pnpm create vite@latest
 cd contador-global
-npm i
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 ---
@@ -190,10 +190,10 @@ export default App;
 ### Paso 1: Crear el proyecto con Vite
 
 ```bash
-npm create vite@latest
+pnpm create vite@latest
 cd tema-app
-npm i
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 ### Paso 2: Crear el Context de Tema

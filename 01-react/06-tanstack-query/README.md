@@ -14,7 +14,7 @@
 ## 📦 Instalación
 
 ```bash
-npm install @tanstack/react-query
+pnpm add @tanstack/react-query
 ```
 
 ## 🚀 Configuración inicial

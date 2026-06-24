@@ -10,20 +10,6 @@ Wouter es una biblioteca de enrutamiento para aplicaciones React que permite una
 
 ## Instalación
 
-Para instalar Wouter, puedes usar npm, yarn o pnpm:
-
-```bash
-npm install wouter
-```
-
-o
-
-```bash
-yarn add wouter
-```
-
-o
-
 ```bash
 pnpm add wouter
 ```

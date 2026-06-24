@@ -105,7 +105,7 @@ En `./src/index.css`:
 ## 🚀 Ejecución del Proyecto
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ## 📚 Recursos Adicionales

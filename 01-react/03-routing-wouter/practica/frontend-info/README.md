@@ -23,8 +23,8 @@ git checkout -b fix/routing-errors
 ### 3. Ejecutar el proyecto
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 > Vas a notar que la app no navega correctamente, muestra pantallas en blanco o quizas renderiza más de lo debido.

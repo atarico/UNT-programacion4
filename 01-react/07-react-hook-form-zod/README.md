@@ -35,7 +35,7 @@ Se puede aplicar en situaciones comunes como:
 Para usar ambas herramientas juntas, necesitamos instalar `react-hook-form`, `zod` y el **resolver** que permite conectarlos:
 
 ```bash
-npm install react-hook-form zod @hookform/resolvers
+pnpm add react-hook-form zod @hookform/resolvers
 ```
 
 ## 🔍 React Hook Form Básico (Sin Zod)
